@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Vika | Starter Application' });
+  res.render('index', { title: 'Kate | Starter RESTful API' });
 });
 
 module.exports = router;
