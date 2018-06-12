@@ -19,7 +19,7 @@ A boilerplate REST API on top of [Vika](https://github.com/tdreid/vika) which us
 `npm run build` 
 
 ## Preflight Checklist
-* You should...
+*You should...
 - Change the title of your application in `/routes/index.js`
 - Give your project a `name` and `version` in `package.json`
 - Build the best RESTful API ever!
