@@ -22,4 +22,5 @@ A boilerplate REST API on top of [Vika](https://github.com/tdreid/vika) which us
 *You should...*
 - Change the title of your application in `/routes/index.js`
 - Give your project a `name` and `version` in `package.json`
+- Replace or update this README.md file
 - Build the best RESTful API ever!
