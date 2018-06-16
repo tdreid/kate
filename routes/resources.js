@@ -1,8 +1,18 @@
 const express = require('express');
 const router = express.Router();
+const mongoose = require('mongoose');
+const Resource = require('../models/resourceModel');
+
+mongoose.connect('mongoose://localhost/resources');
 
 router.route('/Resources').get((req, res) => {
-  res.json({ id: 1, payload: { message: 'This is my payload.' } });
+  Resource.find((err, resources) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.json(resources);
+    }
+  });
 });
 
 module.exports = router;
