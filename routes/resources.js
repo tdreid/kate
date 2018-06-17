@@ -8,7 +8,7 @@ mongoose.connect('mongodb://localhost/resources');
 router.route('/Resources').get((req, res) => {
   Resource.find(req.query, (err, resources) => {
     if (err) {
-      console.log(err);
+      res.status(500).send(err);
     } else {
       res.json(resources);
     }
