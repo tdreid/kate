@@ -6,7 +6,7 @@ const Resource = require('../models/resourceModel');
 mongoose.connect('mongodb://localhost/resources');
 
 router
-  .route('/Resources')
+  .route('/')
   .get((req, res, next) => {
     Resource.find(req.query, (err, resources) => {
       if (err) {
@@ -26,7 +26,7 @@ router
     }
   });
 
-router.route('/Resources/:id').get((req, res, next) => {
+router.route('/:id').get((req, res, next) => {
   Resource.findById(req.params.id, (err, resources) => {
     if (err) {
       next(err);
