@@ -5,10 +5,10 @@ const Resource = require('../models/resourceModel');
 
 mongoose.connect('mongodb://localhost/resources');
 
-router.route('/Resources').get((req, res) => {
+router.route('/Resources').get((req, res, next) => {
   Resource.find(req.query, (err, resources) => {
     if (err) {
-      res.status(500).send(err);
+     next(err);
     } else {
       res.json(resources);
     }
