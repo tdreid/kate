@@ -6,7 +6,7 @@ const Resource = require('../models/resourceModel');
 mongoose.connect('mongodb://localhost/resources');
 
 router.route('/Resources').get((req, res) => {
-  Resource.find((err, resources) => {
+  Resource.find(req.query, (err, resources) => {
     if (err) {
       console.log(err);
     } else {
