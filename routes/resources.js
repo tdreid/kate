@@ -15,4 +15,14 @@ router.route('/Resources').get((req, res, next) => {
   });
 });
 
+router.route('/Resources/:id').get((req, res, next) => {
+  Resource.findById(req.params.id, (err, resources) => {
+    if (err) {
+     next(err);
+    } else {
+      res.json(resources);
+    }
+  });
+});
+
 module.exports = router;
