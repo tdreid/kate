@@ -3,7 +3,7 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const Resource = require('../models/resourceModel');
 
-mongoose.connect('mongoose://localhost/resources');
+mongoose.connect('mongodb://localhost/resources');
 
 router.route('/Resources').get((req, res) => {
   Resource.find((err, resources) => {
