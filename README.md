@@ -21,6 +21,7 @@ A boilerplate REST API on top of [Vika](https://github.com/tdreid/vika) which us
 ## Preflight Checklist
 *You should...*
 - Change the title of your application in `/routes/index.js`
+- Change the logging name of your application in `/bin/www`
 - Give your project a `name` and `version` in `package.json`
 - Replace or update this README.md file
 - Build the best RESTful API ever!
